@@ -49,7 +49,6 @@ https.get(option, function (res) {
         console.log('数据包传输完毕');
         let data = Buffer.concat(chunks, size);
         let html = JSON.parse(data.toString());
-        dealImg(html.data)
         // fs.mkdir('./a', function (err) {
         //     if (!err) {
         //         fs.writeFile('./a/1.txt', data.toString(), function (err) {
@@ -62,5 +61,6 @@ https.get(option, function (res) {
         //     }
         
         // })
+        dealImg(html.data)
     });
 })
